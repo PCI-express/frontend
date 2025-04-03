@@ -29,9 +29,6 @@ importers:
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
-      gh-pages:
-        specifier: ^6.3.0
-        version: 6.3.0
       jwt-decode:
         specifier: ^4.0.0
         version: 4.0.0
@@ -75,6 +72,9 @@ importers:
       eslint-plugin-react-refresh:
         specifier: ^0.4.19
         version: 0.4.19(eslint@9.22.0(jiti@2.4.2))
+      gh-pages:
+        specifier: ^6.3.0
+        version: 6.3.0
       globals:
         specifier: ^15.15.0
         version: 15.15.0
