@@ -7,9 +7,10 @@ type Props = {
     handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
     pattern? : string,
     className? : string,
+    placeholder?: string
 }
 
-export const Input = ({name, type, value, handleChange, pattern, className}: Props) => {
+export const Input = ({name, type, value, handleChange, pattern, className, placeholder}: Props) => {
     const classes = 'outline-0 border-2 border-solid border-neutral-200 rounded-md px-4 py-2 transition-colors duration-300 block focus:border-indigo-400 w-full'
     return (
         <div className={"mb-5 " + className}>
@@ -24,6 +25,7 @@ export const Input = ({name, type, value, handleChange, pattern, className}: Pro
                     className={classes}
                     autoComplete="off"
                     pattern={pattern}
+                    placeholder={placeholder}
                 />
             </label>
         </div>

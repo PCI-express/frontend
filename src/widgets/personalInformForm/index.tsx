@@ -63,15 +63,6 @@ export const PersonalInformForm = () => {
     }
 
     useEffect(() => {
-        // async function fetchProfile() {
-        //     let data = {}
-        //     while (Object.keys(data).length === 0){
-        //         data = await User.getProfileUser();
-        //     }
-            
-        //     setFormData((l) => ({...l, ...data}));
-        // }
-
         fetchProfile(setFormData);
     }, []);
 
@@ -133,6 +124,7 @@ export const PersonalInformForm = () => {
                             handleChange={(e) => setFormData((l) => ({...l, phone_number: e.target.value}))}
                             pattern="^(\+7|8)[\s]\([489][0-9]{2}\)[\s][0-9]{3}[\-][0-9]{2}[\-][0-9]{2}$"
                             className="w-full"
+                            placeholder="+7 (___) ___-__-__"
                         />
                     </div>
                 </div>

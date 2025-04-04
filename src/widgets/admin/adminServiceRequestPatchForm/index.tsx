@@ -123,7 +123,7 @@ export const AdminServiceRequestPatchForm: FC = () => {
     }
 
     return (
-        <Container className="p-15">
+        <Container className="h-fit p-15 w-fit">
             <form onSubmit={handelSubmit} className="w-200">
                 <div className="w-full">
                     <h1 className="font-bold text-3xl mb-16 text-indigo-400 cursor-default">
@@ -188,6 +188,7 @@ export const AdminServiceRequestPatchForm: FC = () => {
                             handleChange={(e) => setFormData((l) => ({...l, phone_number: e.target.value}))}
                             pattern="^(\+7|8)[\s]\([489][0-9]{2}\)[\s][0-9]{3}[\-][0-9]{2}[\-][0-9]{2}$"
                             className="w-[50%]"
+                            placeholder="+7 (___) ___-__-__"
                         />
                         <DropdownInput
                             options={['cash', 'cashless']}

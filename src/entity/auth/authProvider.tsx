@@ -1,5 +1,6 @@
 import { FC, ReactNode, useEffect, useState } from "react";
 import { AuthContext } from "./context";
+import { jwtDecode } from 'jwt-decode'
 
 type PropsType = {
     children: ReactNode,
@@ -7,10 +8,12 @@ type PropsType = {
 
 export const AuthProvider: FC<PropsType> = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    // const [isStaff, setIsStaff] = useState(false);
 
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
-        if (token) {
+        const user = jwtDecode(token || '');
+        if ('user_id' in user) {
             setIsLoggedIn(true);
         }
     }, []);

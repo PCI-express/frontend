@@ -1,7 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom'; 
-import { LoginPage, RegistrationPage, ProfilePage, ServiceRequestCreationPage, ServiceRequestsPage, AdminServiceRequestsPage } from '../../pages';
+import { LoginPage, RegistrationPage, ProfilePage, ServiceRequestCreationPage, ServiceRequestsPage, AdminServiceRequestsPage, AdminServiceRequestPatchPage } from '../../pages';
 import { Layout, AdminLayout } from '../../layout';
-import { AdminServiceRequestPatchForm } from '../../widgets/admin';
 
 const router = createBrowserRouter([
     {
@@ -51,7 +50,7 @@ const router = createBrowserRouter([
                             },
                             {
                                 path: ':id',
-                                element: <AdminServiceRequestPatchForm />
+                                element: <AdminServiceRequestPatchPage />
                             }
 
                         ]

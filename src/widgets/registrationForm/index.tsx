@@ -111,6 +111,7 @@ export const RegistrationForm: FC = () => {
                     handleChange={(e) => setFormData((l) => ({...l, phone_number: e.target.value}))}
                     className="w-3xs sm:w-xs md:w-sm"
                     pattern="^(\+7|8)[\s]\([489][0-9]{2}\)[\s][0-9]{3}[\-][0-9]{2}[\-][0-9]{2}$"
+                    placeholder="+7 (___) ___-__-__"
                 />
                 <Input 
                     name='password' 

@@ -1,6 +1,6 @@
 import { FC, useEffect, useLayoutEffect, useState } from "react"
 import { Container } from "../../../ui"
-import { AdminServiceRequestRow } from "../../../features"
+import { AdminServiceRequestRow, AdminServiceRequestsHeaderList } from "../../../features"
 import { AdminServiceRequestData } from "../../../helpers"
 import { AdminServiceRequest, Service} from "../../../models"
 import { AdminUser } from "../../../models/admin/adminUser"
@@ -42,13 +42,16 @@ export const AdminServiceRequestsList: FC = () => {
     }, []);
 
     return (
-        <Container className="p-15">
+        <Container className="p-15 h-full w-fit">
             {error && (
                 <div className="text-red-500 mb-5 text-center text-3xl w-300">
                     {error}
                 </div>
             ) || (
                 <>
+                    <div>
+                        <AdminServiceRequestsHeaderList />
+                    </div>
                     <div>
                         {serviceRequestList?.map((data) => {
                             return (

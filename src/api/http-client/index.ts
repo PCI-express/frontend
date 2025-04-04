@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_URL = 'http://127.0.0.1:8000/api/';
+export const API_URL = 'http://212.67.8.123:8000/api/';
 
 export const httpClient = axios.create({
     // withCredentials: true,
